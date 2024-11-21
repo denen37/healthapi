@@ -39,6 +39,10 @@ const appointmentRoutes = require('./src/routes/appointmentRoutes');
 const providerRoutes = require('./src/routes/providerRoutes');
 const transactionRoutes = require('./src/routes/transactionRoutes');
 
+app.get('/home', (req, res) => {
+    res.status(200).json('Welcome, your app is working well');
+})
+
 app.use('/', indexRouter);
 app.use('/chat', chatRoutes);
 app.use('/users', userRoutes);
